@@ -6,7 +6,7 @@
 <title>Micah Yursik</title>
 <meta name="description" content="A free encouraging note for moms every Monday from Micah Yursik, plus the things she actually uses and loves.">
 <meta property="og:title" content="Micah Yursik · A Note for Mom">
-<meta property="og:description" content="One encouraging note, every Monday, free. Helping moms hear God in the chaos.">
+<meta property="og:description" content="One encouraging note every Monday, free — a verse, a perspective shift, a prayer, and a few little joys.">
 <meta property="og:image" content="micah.jpg">
 <link rel="icon" href="micah.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -369,6 +369,7 @@
       <li><span><strong>One verse</strong> for the week</span></li>
       <li><span><strong>One perspective shift</strong> from real motherhood</span></li>
       <li><span><strong>One short prayer</strong> you can pray in the car line</span></li>
+      <li><span><strong>A few little joys</strong> — the small things making my week better (some you can grab from my TikTok Shop)</span></li>
     </ul>
 
     <form id="signup" novalidate>
@@ -397,17 +398,18 @@
 
   <section class="picks" aria-labelledby="picks-title">
     <header>
-      <h2 id="picks-title">Things I actually use</h2>
-      <p>What's in my church bag, my quiet-time corner, and my "mom needs a minute" drawer.</p>
+      <h2 id="picks-title">Little joys</h2>
+      <p>The small things I'm loving right now — what's in my church bag, my quiet-time corner, and my "mom needs a minute" drawer.</p>
     </header>
 
     <div id="pick-groups"></div>
 
     <div class="soon" id="picks-soon" hidden>
-      <p>I'm putting the list together right now — check back soon or watch for it on TikTok.</p>
+      <p>I'm putting this week's list together — the Monday note always has the newest ones.</p>
     </div>
 
-    <a class="btn btn-sage" id="storefront" href="#" hidden>Shop all my favorites on Amazon</a>
+    <a class="btn btn-accent" id="tiktokshop" href="#" hidden>Shop my TikTok Shop picks</a>
+    <a class="btn btn-sage" id="storefront" href="#" hidden>Shop my Amazon favorites</a>
     <p class="disclose">Some of these are affiliate links. If you buy through them I earn a small commission at no extra cost to you — thank you for supporting this little corner of the internet.</p>
   </section>
 
@@ -431,14 +433,17 @@
   // Leave empty until the list exists and the page shows a friendly "opening soon".
   const KIT_FORM_ID = "";
 
-  // Amazon storefront (or LTK / other) URL for the big green button.
+  // TikTok Shop showcase URL (Creator tools > Showcase > Share). Empty hides the button.
+  const TIKTOK_SHOP_URL = "";
+
+  // Amazon storefront (or LTK / other) URL for the green button. Empty hides it.
   const STOREFRONT_URL = "";
 
   // Recommendations, grouped. Each pick: name, why (one short line), url.
   const PICKS = [
-    { group: "For quiet time", items: [] },
-    { group: "For the kids",   items: [] },
-    { group: "For mom",        items: [] },
+    { group: "This week's little joys", items: [] },
+    { group: "For quiet time",          items: [] },
+    { group: "For the kids",            items: [] },
   ];
 
   /* =============================================================== */
@@ -467,7 +472,9 @@
   }
   const store = document.getElementById('storefront');
   if (STOREFRONT_URL) { store.href = STOREFRONT_URL; store.hidden = false; store.target = '_blank'; store.rel = 'noopener sponsored'; }
-  document.getElementById('picks-soon').hidden = any || !!STOREFRONT_URL;
+  const tts = document.getElementById('tiktokshop');
+  if (TIKTOK_SHOP_URL) { tts.href = TIKTOK_SHOP_URL; tts.hidden = false; tts.target = '_blank'; tts.rel = 'noopener sponsored'; }
+  document.getElementById('picks-soon').hidden = any || !!STOREFRONT_URL || !!TIKTOK_SHOP_URL;
 
   // ---- signup ----
   const form = document.getElementById('signup');
