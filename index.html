@@ -124,17 +124,22 @@
     line-height: 1.05;
     letter-spacing: -.01em;
   }
-  .who .role { color: var(--rose); margin-top: 2px; }
-  .who .role span { margin: 0 6px; }
+  .who .role { color: var(--rose-deep); margin-top: 4px; font-size: 13px; }
+  .who .role span { margin: 0 6px; color: var(--rose); }
   .who .tag {
-    margin: 4px 0 0;
-    font-size: 27px;
-    line-height: 1.15;
+    margin: 8px 0 0;
+    max-width: 30ch;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 21px;
+    line-height: 1.3;
+    color: var(--ink);
     text-wrap: balance;
   }
   .who .tag .ref {
     display: block;
-    margin-top: 4px;
+    margin-top: 6px;
+    font-style: normal;
     font-size: 11px;
     color: var(--ink-faint);
   }
@@ -165,23 +170,35 @@
   .cta .label {
     position: relative;
     display: grid;
-    gap: 2px;
-    padding: 20px 22px 18px;
+    gap: 6px;
+    padding: 22px 22px 20px;
     color: #fff;
-  }
-  .cta .label .big {
-    font-family: "Dancing Script", cursive;
-    font-size: 34px;
-    line-height: 1;
-    font-weight: 700;
   }
   .cta .label .small {
     font-family: "Playfair Display", Georgia, serif;
     text-transform: uppercase;
-    letter-spacing: .16em;
+    letter-spacing: .18em;
     font-size: 12px;
     font-weight: 600;
-    opacity: .95;
+    opacity: .9;
+  }
+  .cta .label .big {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 27px;
+    line-height: 1.1;
+    font-weight: 700;
+    text-wrap: balance;
+  }
+  .cta .label .tap {
+    display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+    margin: 6px auto 0;
+    padding: 9px 18px;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--rose-deep);
+    font-family: "Lora", Georgia, serif;
+    font-weight: 600;
+    font-size: 15px;
   }
   .cta:focus-visible { outline: 3px solid rgba(196,102,124,.5); outline-offset: 4px; border-radius: 8px; }
   .signup .fine {
@@ -329,8 +346,8 @@
   @media (max-width: 420px) {
     body { font-size: 16px; padding-block: 36px 48px; }
     .who h1 { font-size: 32px; }
-    .who .tag { font-size: 24px; }
-    .cta .label .big { font-size: 30px; }
+    .who .tag { font-size: 19px; }
+    .cta .label .big { font-size: 24px; }
     .note, .formwrap { padding-inline: 18px; }
     .note h2, .picks h2 { font-size: 27px; }
   }
@@ -355,18 +372,19 @@
     <div class="pic"><img src="micah.jpg" alt="Micah Yursik" width="140" height="140"></div>
     <h1 class="bronze">Micah Yursik</h1>
     <div class="caps role">Joy for today <span>♥</span> Peace for tomorrow</div>
-    <p class="script tag">"He gently leads those that have young."<span class="caps ref">Isaiah 40:11</span></p>
+    <p class="tag">"He gently leads those that have young."<span class="caps ref">Isaiah 40:11</span></p>
   </header>
 
   <section class="signup" id="signup-section" aria-labelledby="cta-title">
     <button class="cta" id="cta" type="button" aria-expanded="false" aria-controls="formwrap">
       <span class="band" aria-hidden="true"></span>
       <span class="label">
-        <span class="big" id="cta-title">Sign up for the weekly Mom-Note</span>
-        <span class="small">Free &nbsp;·&nbsp; every Monday &nbsp;·&nbsp; 2-minute read</span>
+        <span class="small">Free &nbsp;·&nbsp; every Monday</span>
+        <span class="big" id="cta-title">Get the weekly Mom-Note</span>
+        <span class="tap">Tap to sign up <span aria-hidden="true">→</span></span>
       </span>
     </button>
-    <p class="fine">One encouraging note in your inbox to start the week. <b>No spam, ever.</b></p>
+    <p class="fine">One encouraging note in your inbox every Monday. <b>No spam, ever.</b></p>
 
     <div class="formwrap" id="formwrap" hidden>
       <form id="signup" novalidate>
