@@ -17,7 +17,7 @@
     --ground: #FCF5F1;
     --card: #FFFDF9;
     --card-edge: #EBDCD4;
-    --line: #C9D8EA;
+    --line: #DCE6F2;
     --ink: #2B2430;
     --ink-soft: #6B5F68;
     --ink-faint: #9C8F98;
@@ -35,7 +35,7 @@
       --ground: #1F1A21;
       --card: #2A2329;
       --card-edge: #3B323A;
-      --line: #3A4657;
+      --line: #343D4A;
       --ink: #F4ECEE;
       --ink-soft: #C4B6BE;
       --ink-faint: #8E8189;
@@ -53,7 +53,7 @@
     --ground: #1F1A21;
     --card: #2A2329;
     --card-edge: #3B323A;
-    --line: #3A4657;
+    --line: #343D4A;
     --ink: #F4ECEE;
     --ink-soft: #C4B6BE;
     --ink-faint: #8E8189;
@@ -75,7 +75,7 @@
     color: var(--ink);
     font-family: "Nunito", "Segoe UI", system-ui, sans-serif;
     font-size: 17px;
-    line-height: 1.55;
+    line-height: 26px;
     padding-inline: 20px;
     padding-block: 36px 48px;
   }
@@ -129,11 +129,11 @@
     background:
       repeating-linear-gradient(
         to bottom,
-        transparent 0 31px,
-        var(--line) 31px 32px
+        transparent 0 25px,
+        var(--line) 25px 26px
       ),
       var(--card);
-    background-position: 0 14px, 0 0;
+    background-position: 0 6px, 0 0;
     border: 1px solid var(--card-edge);
     border-radius: 6px 6px 22px 6px;
     padding: 30px 26px 28px;
@@ -171,13 +171,13 @@
     color: inherit;
     padding: 0 2px;
   }
-  .note p { margin: 0 0 14px; color: var(--ink-soft); }
+  .note p { margin: 0 0 14px; color: var(--ink-soft); line-height: 26px; }
   .whatsin {
     list-style: none;
     margin: 0 0 20px;
     padding: 0;
     display: grid;
-    gap: 6px;
+    gap: 0;
     font-size: 16px;
   }
   .whatsin li {
@@ -366,9 +366,9 @@
     <h2 id="note-title">One encouraging note, <mark>every Monday</mark>, free.</h2>
     <p>Two minutes to read. Written for the mom who's tired, trying, and needs to hear that God is close right now — not once everything's under control.</p>
     <ul class="whatsin">
-      <li><strong>One verse</strong> for the week</li>
-      <li><strong>One perspective shift</strong> from real motherhood</li>
-      <li><strong>One short prayer</strong> you can pray in the car line</li>
+      <li><span><strong>One verse</strong> for the week</span></li>
+      <li><span><strong>One perspective shift</strong> from real motherhood</span></li>
+      <li><span><strong>One short prayer</strong> you can pray in the car line</span></li>
     </ul>
 
     <form id="signup" novalidate>
