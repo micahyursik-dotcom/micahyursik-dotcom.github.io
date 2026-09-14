@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Micah Yursik</title>
+<meta name="description" content="A free encouraging note for moms every Monday from Micah Yursik, plus the things she actually uses and loves.">
+<meta property="og:title" content="Micah Yursik · A Note for Mom">
+<meta property="og:description" content="One encouraging note, every Monday, free. Helping moms hear God in the chaos.">
+<meta property="og:image" content="micah.jpg">
+<link rel="icon" href="micah.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,500;9..144,600,100&family=Homemade+Apple&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+  :root {
+    --ground: #FCF5F1;
+    --card: #FFFDF9;
+    --card-edge: #EBDCD4;
+    --line: #C9D8EA;
+    --ink: #2B2430;
+    --ink-soft: #6B5F68;
+    --ink-faint: #9C8F98;
+    --accent: #A6415B;
+    --accent-ink: #FFFFFF;
+    --accent-soft: #F6E1E6;
+    --sage: #6F8F7A;
+    --sage-soft: #E6EEE8;
+    --marker: #FFE68A;
+    --shadow: 0 18px 40px -22px rgba(90, 40, 55, .35);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #1F1A21;
+      --card: #2A2329;
+      --card-edge: #3B323A;
+      --line: #3A4657;
+      --ink: #F4ECEE;
+      --ink-soft: #C4B6BE;
+      --ink-faint: #8E8189;
+      --accent: #E48EA4;
+      --accent-ink: #2B1A21;
+      --accent-soft: #40282F;
+      --sage: #9DB8A4;
+      --sage-soft: #26302A;
+      --marker: #7A6A2A;
+      --shadow: 0 18px 40px -22px rgba(0, 0, 0, .7);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #1F1A21;
+    --card: #2A2329;
+    --card-edge: #3B323A;
+    --line: #3A4657;
+    --ink: #F4ECEE;
+    --ink-soft: #C4B6BE;
+    --ink-faint: #8E8189;
+    --accent: #E48EA4;
+    --accent-ink: #2B1A21;
+    --accent-soft: #40282F;
+    --sage: #9DB8A4;
+    --sage-soft: #26302A;
+    --marker: #7A6A2A;
+    --shadow: 0 18px 40px -22px rgba(0, 0, 0, .7);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Nunito", "Segoe UI", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    padding-inline: 20px;
+    padding-block: 36px 48px;
+  }
+  .wrap {
+    max-width: 540px;
+    margin-inline: auto;
+    display: grid;
+    gap: 36px;
+  }
+
+  /* ---- header ---- */
+  .who {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .who img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 100%;
+    box-shadow: 0 0 0 4px var(--card), 0 0 0 6px var(--card-edge);
+  }
+  .who h1 {
+    margin: 6px 0 0;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: -.01em;
+    line-height: 1.1;
+  }
+  .who .handle {
+    font-size: 14px;
+    color: var(--ink-faint);
+    font-weight: 600;
+    letter-spacing: .02em;
+  }
+  .who .tag {
+    margin: 0;
+    max-width: 34ch;
+    color: var(--ink-soft);
+    font-size: 17px;
+    text-wrap: balance;
+  }
+
+  /* ---- the note card ---- */
+  .note {
+    position: relative;
+    background:
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0 31px,
+        var(--line) 31px 32px
+      ),
+      var(--card);
+    background-position: 0 14px, 0 0;
+    border: 1px solid var(--card-edge);
+    border-radius: 6px 6px 22px 6px;
+    padding: 30px 26px 28px;
+    box-shadow: var(--shadow);
+  }
+  .note::before {            /* the red margin line of a notebook page */
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 18px;
+    width: 1px;
+    background: color-mix(in srgb, var(--accent) 45%, transparent);
+    opacity: .55;
+    pointer-events: none;
+  }
+  .note > * { position: relative; }
+  .script {
+    font-family: "Homemade Apple", "Caveat", cursive;
+    font-size: 22px;
+    color: var(--accent);
+    margin: 0 0 8px;
+    transform: rotate(-1.5deg);
+    transform-origin: left center;
+  }
+  .note h2 {
+    margin: 0 0 14px;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 1.18;
+    letter-spacing: -.012em;
+    text-wrap: balance;
+  }
+  .note h2 mark {
+    background: linear-gradient(transparent 55%, var(--marker) 55% 92%, transparent 92%);
+    color: inherit;
+    padding: 0 2px;
+  }
+  .note p { margin: 0 0 14px; color: var(--ink-soft); }
+  .whatsin {
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+    font-size: 16px;
+  }
+  .whatsin li {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .whatsin li::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid var(--accent);
+    border-radius: 3px;
+    position: relative;
+    top: 2px;
+  }
+  .whatsin li strong { font-weight: 700; color: var(--ink); }
+
+  form {
+    display: grid;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .field { display: grid; gap: 4px; }
+  .field label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  input[type="email"], input[type="text"] {
+    width: 100%;
+    font: inherit;
+    font-size: 17px;
+    padding: 13px 14px;
+    border-radius: 10px;
+    border: 1.5px solid var(--card-edge);
+    background: var(--ground);
+    color: var(--ink);
+  }
+  input:focus-visible, button:focus-visible, a:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+    outline-offset: 2px;
+  }
+  .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    font: inherit;
+    font-weight: 800;
+    font-size: 17px;
+    padding: 15px 18px;
+    border-radius: 12px;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform .12s ease, filter .12s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-accent { background: var(--accent); color: var(--accent-ink); }
+  .btn-accent:hover { filter: brightness(1.06); }
+  .btn-sage { background: var(--sage); color: #fff; }
+  .btn-quiet {
+    background: var(--card);
+    color: var(--ink);
+    border: 1.5px solid var(--card-edge);
+  }
+  .fine {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: var(--ink-faint);
+    text-align: center;
+  }
+  .thanks {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-weight: 600;
+  }
+  .thanks p { margin: 0; color: var(--ink); }
+  .thanks p + p { margin-top: 6px; font-weight: 400; color: var(--ink-soft); font-size: 15px; }
+
+  /* ---- picks ---- */
+  .picks { display: grid; gap: 16px; }
+  .picks header { display: grid; gap: 4px; }
+  .picks h2 {
+    margin: 0;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -.01em;
+  }
+  .picks header p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+  .group { display: grid; gap: 8px; }
+  .group h3 {
+    margin: 6px 0 0;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--sage);
+  }
+  .pick {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--card);
+    border: 1px solid var(--card-edge);
+    border-radius: 14px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .pick:hover { border-color: var(--sage); }
+  .pick .name { font-weight: 700; }
+  .pick .why { font-size: 14px; color: var(--ink-soft); margin-top: 2px; }
+  .pick .go {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--sage);
+    white-space: nowrap;
+  }
+  .soon {
+    background: var(--sage-soft);
+    border-radius: 14px;
+    padding: 16px 18px;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+  .soon p { margin: 0; }
+  .disclose { font-size: 12.5px; color: var(--ink-faint); margin: 0; }
+
+  /* ---- follow + footer ---- */
+  .follow { display: grid; gap: 10px; }
+  .verse {
+    text-align: center;
+    color: var(--ink-soft);
+    font-family: "Fraunces", Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .verse small {
+    display: block;
+    margin-top: 6px;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  [hidden] { display: none !important; }
+
+  @media (max-width: 420px) {
+    body { font-size: 16px; padding-block: 28px 40px; }
+    .note { padding: 26px 20px 24px; }
+    .note h2 { font-size: 24px; }
+    .who h1 { font-size: 27px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header class="who">
+    <img src="micah.jpg" alt="Micah Yursik" width="128" height="128">
+    <div>
+      <h1>Micah Yursik</h1>
+      <div class="handle">@micahyursik</div>
+    </div>
+    <p class="tag">Mom, wife, and a woman who's still learning to hear God in the middle of the chaos.</p>
+  </header>
+
+  <section class="note" aria-labelledby="note-title">
+    <p class="script">a note for mom</p>
+    <h2 id="note-title">One encouraging note, <mark>every Monday</mark>, free.</h2>
+    <p>Two minutes to read. Written for the mom who's tired, trying, and needs to hear that God is close right now — not once everything's under control.</p>
+    <ul class="whatsin">
+      <li><strong>One verse</strong> for the week</li>
+      <li><strong>One perspective shift</strong> from real motherhood</li>
+      <li><strong>One short prayer</strong> you can pray in the car line</li>
+    </ul>
+
+    <form id="signup" novalidate>
+      <div class="field">
+        <label for="first_name">First name</label>
+        <input type="text" id="first_name" name="fields[first_name]" autocomplete="given-name" placeholder="Your name">
+      </div>
+      <div class="field">
+        <label for="email_address">Email</label>
+        <input type="email" id="email_address" name="email_address" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+      </div>
+      <button type="submit" class="btn btn-accent" id="submit-btn">Send me the Monday note</button>
+      <p class="fine">Free forever. No spam, ever. Unsubscribe with one tap.</p>
+    </form>
+
+    <div class="thanks" id="thanks" hidden>
+      <p>You're on the list. 🤍</p>
+      <p>Check your inbox for a quick confirmation email — your first note comes Monday.</p>
+    </div>
+
+    <div class="thanks" id="not-open" hidden>
+      <p>Sign-ups open in a few days.</p>
+      <p>I'm setting up the list right now. Follow <a href="https://www.tiktok.com/@micahyursik" style="color:var(--accent)">@micahyursik</a> so you catch the very first note.</p>
+    </div>
+  </section>
+
+  <section class="picks" aria-labelledby="picks-title">
+    <header>
+      <h2 id="picks-title">Things I actually use</h2>
+      <p>What's in my church bag, my quiet-time corner, and my "mom needs a minute" drawer.</p>
+    </header>
+
+    <div id="pick-groups"></div>
+
+    <div class="soon" id="picks-soon" hidden>
+      <p>I'm putting the list together right now — check back soon or watch for it on TikTok.</p>
+    </div>
+
+    <a class="btn btn-sage" id="storefront" href="#" hidden>Shop all my favorites on Amazon</a>
+    <p class="disclose">Some of these are affiliate links. If you buy through them I earn a small commission at no extra cost to you — thank you for supporting this little corner of the internet.</p>
+  </section>
+
+  <section class="follow">
+    <a class="btn btn-quiet" href="https://www.tiktok.com/@micahyursik">Follow on TikTok</a>
+  </section>
+
+  <footer>
+    <p class="verse">"Therefore do not worry about tomorrow, for tomorrow will worry about itself."<small>Matthew 6:34</small></p>
+  </footer>
+
+</main>
+
+<script>
+  /* ===============================================================
+     EDIT THESE — everything below the line just renders them.
+     =============================================================== */
+
+  // Kit (formerly ConvertKit) form ID. Create a form in Kit, then paste the
+  // number from its embed code (e.g. https://app.kit.com/forms/1234567/subscriptions).
+  // Leave empty until the list exists and the page shows a friendly "opening soon".
+  const KIT_FORM_ID = "";
+
+  // Amazon storefront (or LTK / other) URL for the big green button.
+  const STOREFRONT_URL = "";
+
+  // Recommendations, grouped. Each pick: name, why (one short line), url.
+  const PICKS = [
+    { group: "For quiet time", items: [] },
+    { group: "For the kids",   items: [] },
+    { group: "For mom",        items: [] },
+  ];
+
+  /* =============================================================== */
+
+  // ---- picks ----
+  const groupsEl = document.getElementById('pick-groups');
+  let any = false;
+  for (const g of PICKS) {
+    if (!g.items.length) continue;
+    any = true;
+    const wrap = document.createElement('div');
+    wrap.className = 'group';
+    const h = document.createElement('h3'); h.textContent = g.group; wrap.appendChild(h);
+    for (const p of g.items) {
+      const a = document.createElement('a');
+      a.className = 'pick'; a.href = p.url; a.target = '_blank'; a.rel = 'noopener sponsored';
+      const left = document.createElement('div');
+      const name = document.createElement('div'); name.className = 'name'; name.textContent = p.name;
+      left.appendChild(name);
+      if (p.why) { const why = document.createElement('div'); why.className = 'why'; why.textContent = p.why; left.appendChild(why); }
+      const go = document.createElement('span'); go.className = 'go'; go.textContent = 'Shop →';
+      a.append(left, go);
+      wrap.appendChild(a);
+    }
+    groupsEl.appendChild(wrap);
+  }
+  const store = document.getElementById('storefront');
+  if (STOREFRONT_URL) { store.href = STOREFRONT_URL; store.hidden = false; store.target = '_blank'; store.rel = 'noopener sponsored'; }
+  document.getElementById('picks-soon').hidden = any || !!STOREFRONT_URL;
+
+  // ---- signup ----
+  const form = document.getElementById('signup');
+  const btn = document.getElementById('submit-btn');
+  const email = document.getElementById('email_address');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!email.checkValidity()) { email.reportValidity(); return; }
+
+    if (!KIT_FORM_ID) {
+      form.hidden = true;
+      document.getElementById('not-open').hidden = false;
+      return;
+    }
+
+    const action = `https://app.kit.com/forms/${KIT_FORM_ID}/subscriptions`;
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const res = await fetch(action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || data.status === 'failed') throw new Error(data.message || 'Sign-up failed');
+      form.hidden = true;
+      document.getElementById('thanks').hidden = false;
+    } catch (err) {
+      // Fallback: let Kit handle it as a normal form post.
+      form.method = 'post'; form.action = action;
+      form.removeAttribute('novalidate');
+      HTMLFormElement.prototype.submit.call(form);
+    }
+  });
+</script>
+</body>
+</html>
