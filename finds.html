@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Micah Yursik</title>
-<meta name="description" content="Sign up for the free weekly Mom-Note from Micah Yursik — a verse, a perspective shift, a prayer, and a few little joys every Monday.">
-<meta property="og:title" content="Micah Yursik · The weekly Mom-Note">
-<meta property="og:description" content="One encouraging note every Monday, free — a verse, a perspective shift, a prayer, and a few little joys.">
+<title>Micah's Amazon Finds</title>
+<meta name="description" content="Things Micah Yursik actually uses — Amazon finds for moms, organized by category.">
+<meta property="og:title" content="Micah's Amazon Finds">
 <meta property="og:image" content="micah-2.jpg">
 <link rel="icon" href="micah-2.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Dancing+Script:wght@500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
 <style>
+
   :root {
     --cream: #FBF4F2;
     --blush: #F5DEE0;
@@ -381,235 +381,109 @@
   @media (prefers-reduced-motion: reduce) {
     .btn, .cta .band { transition: none; }
   }
+
+  /* finds page */
+  .finds-head { text-align: center; display: grid; gap: 6px; justify-items: center; }
+  .finds-head img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 4px var(--card), 0 10px 24px -10px rgba(120,50,70,.4); }
+  .finds-head h1 { margin: 8px 0 0; font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 32px; line-height: 1.05; }
+  .finds-head p { margin: 0; font-size: 22px; }
+  .cat { display: grid; gap: 10px; }
+  .cat h2 { margin: 0; font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 20px; color: var(--rose-deep); display: flex; align-items: center; gap: 10px; }
+  .cat h2::after { content: ""; flex: 1; height: 1px; background: var(--card-edge); }
+  .tile {
+    display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px;
+    padding: 14px 16px; background: var(--card); border: 1px solid var(--card-edge); border-radius: 14px;
+    color: inherit; text-decoration: none; box-shadow: 0 12px 26px -20px rgba(150,70,90,.35);
+  }
+  .tile:hover { border-color: var(--rose); }
+  .tile .name { font-family: "Playfair Display", Georgia, serif; font-weight: 600; font-size: 16px; line-height: 1.25; }
+  .tile .why { font-size: 14px; color: var(--ink-soft); margin-top: 3px; }
+  .tile .go { background: var(--rose); color: #fff; font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; padding: 10px 14px; border-radius: 10px; white-space: nowrap; }
+  .back { text-align: center; }
+  .back a { color: var(--rose-deep); font-family: "Playfair Display", Georgia, serif; font-weight: 600; text-decoration: none; }
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <filter id="brush" x="-5%" y="-20%" width="110%" height="140%">
-    <feTurbulence type="fractalNoise" baseFrequency="0.018 0.05" numOctaves="3" seed="11" result="n"/>
-    <feDisplacementMap in="SourceGraphic" in2="n" scale="16" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
-</svg>
 <img class="floral tr" src="floral.webp" alt="" aria-hidden="true">
 <img class="floral bl" src="floral.webp" alt="" aria-hidden="true">
-
 <main class="wrap">
-
-  <header class="who">
-    <div class="pic"><img src="micah-2.jpg" alt="Micah Yursik" width="140" height="140"></div>
-    <h1 class="bronze">Micah Yursik</h1>
-    <div class="caps role">Joy for today <span>♥</span> Peace for tomorrow</div>
-    <p class="tag">"He tenderly leads those that have young."<span class="caps ref">Isaiah 40:11</span></p>
+  <header class="finds-head">
+    <img src="micah-2.jpg" alt="Micah Yursik">
+    <h1 class="bronze">My Amazon finds</h1>
+    <p class="script">things I actually use &amp; love</p>
   </header>
 
-  <section class="signup" id="signup-section" aria-labelledby="cta-title">
-    <button class="cta" id="cta" type="button" aria-expanded="false" aria-controls="formwrap">
-      <span class="band" aria-hidden="true"></span>
-      <span class="label">
-        <span class="small">Free &nbsp;·&nbsp; every Monday</span>
-        <span class="big" id="cta-title">Get the weekly Mom-Note</span>
-        <span class="tap">Tap to sign up <span aria-hidden="true">→</span></span>
-      </span>
-    </button>
-    <p class="fine">One encouraging note in your inbox every Monday. <b>No spam, ever.</b></p>
+  <a class="btn btn-sage" id="storefront" href="#" hidden>See my full Amazon storefront</a>
 
-    <div class="formwrap" id="formwrap" hidden>
-      <form id="signup" novalidate>
-        <div class="field">
-          <label class="caps" for="first_name">First name</label>
-          <input type="text" id="first_name" name="fields[first_name]" autocomplete="given-name" placeholder="Your name">
-        </div>
-        <div class="field">
-          <label class="caps" for="email_address">Email</label>
-          <input type="email" id="email_address" name="email_address" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
-        </div>
-        <button type="submit" class="btn btn-rose" id="submit-btn">Send me the Mom-Note</button>
-        <p class="disclose">Unsubscribe with one tap, any time.</p>
-      </form>
+  <div id="cats" style="display:grid;gap:26px"></div>
 
-      <div class="thanks" id="thanks" hidden>
-        <p>You're on the list. ♥</p>
-        <p>A little welcome note from me is on its way — and your first Mom-Note comes Monday.</p>
-      </div>
+  <p class="disclose">As an Amazon Associate I earn from qualifying purchases &mdash; at no extra cost to you. Thank you for supporting this little corner of the internet. &hearts;</p>
 
-      <div class="thanks" id="not-open" hidden>
-        <p>Sign-ups open in a few days.</p>
-        <p>I'm setting up the list right now. Follow <a href="https://www.tiktok.com/@micahyursik">@micahyursik</a> so you catch the very first note.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="hearts" aria-hidden="true">♥</div>
-
-  <section class="note" aria-labelledby="note-title">
-    <h2 id="note-title" class="bronze">What's in the <span class="script">Mom-Note</span></h2>
-    <p>Written for the mom who's tired, trying, and needs to hear that God is close right now — not once everything's under control.</p>
-    <ul class="whatsin">
-      <li><div><strong>One verse</strong><small>to carry through the week</small></div></li>
-      <li><div><strong>One perspective shift</strong><small>from real, messy motherhood</small></div></li>
-      <li><div><strong>One short prayer</strong><small>you can pray in the car line</small></div></li>
-      <li><div><strong>A few little joys</strong><small>the small things making my week better — some you can grab from my TikTok Shop</small></div></li>
-    </ul>
-    <button class="btn btn-link" type="button" id="cta2">Yes, send me the Mom-Note</button>
-  </section>
-
-  <div class="hearts" aria-hidden="true">♥</div>
-
-  <section class="freebies" aria-labelledby="freebies-title">
-    <h2 id="freebies-title" class="bronze">Free printables</h2>
-    <p class="sub script">tell me where to send them</p>
-
-    <div class="gate" id="7-days" data-form="9919664" data-file="pray-scripture-over-your-kids.pdf">
-      <div class="top">
-        <img src="cover-7days.webp" alt="" width="96">
-        <div>
-          <h3>7 Days of Praying Scripture Over Your Kids</h3>
-          <p>A verse, a prayer with your child's name in it, and one line to say over them — for seven days. Plus a fridge page.</p>
-        </div>
-      </div>
-      <form class="gateform" novalidate>
-        <div class="row">
-          <input type="email" name="email_address" autocomplete="email" inputmode="email" placeholder="Your email" required aria-label="Email">
-          <button type="submit" class="btn btn-rose">Send it to me 💌</button>
-        </div>
-        <p class="disclose">You'll also get my free Monday Mom-Note. Unsubscribe anytime.</p>
-      </form>
-      <div class="thanks" hidden>
-        <p>It's yours. ♥</p>
-        <p>Tap below to open it now — I also just emailed you a copy to keep.</p>
-        <a class="btn btn-rose dl" href="pray-scripture-over-your-kids.pdf" target="_blank" rel="noopener">Open the printable</a>
-      </div>
-    </div>
-
-    <div class="gate" id="unstuck" data-form="9919686" data-file="renew-my-mind.pdf">
-      <div class="top">
-        <img src="cover-renew.webp" alt="" width="96">
-        <div>
-          <h3>The journal prompt that gets me unstuck</h3>
-          <p>One page. Four small steps built on Romans 12:2. Five minutes on a hard day.</p>
-        </div>
-      </div>
-      <form class="gateform" novalidate>
-        <div class="row">
-          <input type="email" name="email_address" autocomplete="email" inputmode="email" placeholder="Your email" required aria-label="Email">
-          <button type="submit" class="btn btn-rose">Send it to me 💌</button>
-        </div>
-        <p class="disclose">You'll also get my free Monday Mom-Note. Unsubscribe anytime.</p>
-      </form>
-      <div class="thanks" hidden>
-        <p>It's yours. ♥</p>
-        <p>Tap below to open it now — I also just emailed you a copy to keep.</p>
-        <a class="btn btn-rose dl" href="renew-my-mind.pdf" target="_blank" rel="noopener">Open the sheet</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="hearts" aria-hidden="true">♥</div>
-
-  <section class="picks" id="amazon-finds" aria-labelledby="picks-title">
-    <h2 id="picks-title" class="bronze">My Amazon finds</h2>
-    <a class="btn btn-sage" href="finds.html">See everything I actually use &rarr;</a>
-  </section>
-
+  <div class="hearts" aria-hidden="true">&hearts;</div>
   <section class="follow">
+    <a class="btn btn-rose" href="index.html">Get my free weekly Mom-Note &hearts;</a>
     <a class="btn btn-quiet" href="https://www.tiktok.com/@micahyursik">Follow on TikTok</a>
   </section>
-
-  <footer>
-    <p class="verse">"Therefore do not worry about tomorrow, for tomorrow will worry about itself."<span class="caps">Matthew 6:34</span></p>
-  </footer>
-
 </main>
-
 <script>
-  /* ===============================================================
-     EDIT THESE — everything below the line just renders them.
-     =============================================================== */
+  // Amazon storefront URL (from the Influencer Program). Empty hides the button.
+  const STOREFRONT_URL = "";
 
-  // Kit (formerly ConvertKit) form ID. Create a form in Kit, then paste the
-  // number from its embed code (e.g. https://app.kit.com/forms/1234567/subscriptions).
-  // Leave empty until the list exists and the page shows a friendly "opening soon".
-  const KIT_FORM_ID = "9919649";
+  const PICKS = [
+    { group: "At-home microneedling", items: [
+      { name: "Microneedle derma roller (0.25mm)", why: "the one I actually use", url: "https://amzn.to/4xUV82P" },
+      { name: "Lidocaine numbing cream (5%)", why: "makes it painless", url: "https://amzn.to/472BqX2" },
+      { name: "The Ordinary hyaluronic acid serum", why: "after-roll hydration", url: "https://amzn.to/4r9FIW9" },
+      { name: "Spa headbands + scrunchies", why: "hair out of the way", url: "https://amzn.to/4rlMs39" },
+    ]},
+    { group: "Disney trip", items: [
+      { name: "Toddler harness leash (3-in-1)", why: "crowds + a runner = this", url: "https://amzn.to/4iprJsT" },
+      { name: "Minnie stroller organizer", why: "snacks, wipes, phone", url: "https://amzn.to/4rhZgaY" },
+      { name: "Pink polka-dot fanny pack for kids", why: "she carries her own stuff", url: "https://amzn.to/4h8pQyA" },
+    ]},
+    { group: "Bath & teeth", items: [
+      { name: "Bath toy organizer + foam ABC letters", why: "", url: "https://amzn.to/46omrXm" },
+      { name: "Boka toothpaste (fluoride-free, nano-hydroxyapatite)", why: "mine", url: "https://amzn.to/4yGffly" },
+      { name: "LOL! Kids strawberry toothpaste", why: "the kids' version", url: "https://amzn.to/4hvbzw7" },
+    ]},
+    { group: "Vitamins & supplements", items: [
+      { name: "Organic Lion's Mane capsules", why: "memory + focus for mom brain", url: "https://amzn.to/4h1Usl3" },
+      { name: "Kids multivitamin gummies with iron", why: "sugar-free, methylated", url: "https://amzn.to/46q9yfm" },
+      { name: "Kids super greens gummies", why: "for the veggie refusers", url: "https://amzn.to/46pPJVv" },
+      { name: "Kids calm gummies (magnesium + omega-3)", why: "bedtime helper", url: "https://amzn.to/4AeDett" },
+    ]},
+    { group: "My low-tox makeup", items: [
+      { name: "IT Cosmetics CC+ Cream SPF 50", why: "my everyday foundation", url: "https://amzn.to/3T4lxw8" },
+    ]},
+    { group: "Crafts & learning", items: [
+      { name: "Crayola Twistables crayons (24)", why: "no peeling, no breaking", url: "https://amzn.to/3UVA2mr" },
+      { name: "Toddler crayons (ages 1–3)", why: "unbreakable, non-toxic", url: "https://amzn.to/4h1V3TP" },
+      { name: "Disappearing magic ink pens", why: "church + restaurant lifesaver", url: "https://amzn.to/4yDPkLe" },
+      { name: "Grooved handwriting practice books", why: "ages 3–8", url: "https://amzn.to/3Vw9iZV" },
+    ]},
+    { group: "Clothes", items: [
+      { name: "Pink tennis outfit (mine)", why: "", url: "https://amzn.to/3US13Y2" },
+      { name: "Girls' quick-dry skorts", why: "The Children's Place", url: "https://amzn.to/4h5BcmW" },
+    ]},
+  ];
 
-
-
-
-  /* =============================================================== */
-
-  // ---- open the form ----
-  const cta = document.getElementById('cta');
-  const formwrap = document.getElementById('formwrap');
-  const email = document.getElementById('email_address');
-  function openForm(focus) {
-    formwrap.hidden = false;
-    cta.setAttribute('aria-expanded', 'true');
-    formwrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    if (focus) setTimeout(() => email.focus({ preventScroll: true }), 350);
-  }
-  cta.addEventListener('click', () => openForm(true));
-  document.getElementById('cta2').addEventListener('click', () => openForm(true));
-
-  // ---- Kit subscribe helper ----
-  async function kitSubscribe(formId, formEl) {
-    const action = `https://app.kit.com/forms/${formId}/subscriptions`;
-    const res = await fetch(action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(formEl) });
-    const data = await res.json().catch(() => ({}));
-    if (!res.ok || data.status === 'failed') throw new Error(data.message || 'Sign-up failed');
-    return data;
-  }
-
-  // ---- freebie gates ----
-  document.querySelectorAll('.gate').forEach(gate => {
-    const f = gate.querySelector('.gateform');
-    const em = f.querySelector('input[type=email]');
-    const b = f.querySelector('button');
-    f.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (!em.checkValidity()) { em.reportValidity(); return; }
-      b.disabled = true; b.textContent = 'Sending…';
-      try {
-        await kitSubscribe(gate.dataset.form, f);
-        f.hidden = true;
-        gate.querySelector('.thanks').hidden = false;
-      } catch (err) {
-        b.disabled = false; b.textContent = 'Try again';
-      }
-    });
-  });
-
-  // ---- signup ----
-  const form = document.getElementById('signup');
-  const btn = document.getElementById('submit-btn');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (!email.checkValidity()) { email.reportValidity(); return; }
-
-    if (!KIT_FORM_ID) {
-      form.hidden = true;
-      document.getElementById('not-open').hidden = false;
-      return;
+  const store = document.getElementById('storefront');
+  if (STOREFRONT_URL) { store.href = STOREFRONT_URL; store.hidden = false; store.target = '_blank'; store.rel = 'noopener sponsored'; }
+  const cats = document.getElementById('cats');
+  for (const g of PICKS) {
+    if (!g.items.length) continue;
+    const sec = document.createElement('section'); sec.className = 'cat';
+    const h = document.createElement('h2'); h.textContent = g.group; sec.appendChild(h);
+    for (const p of g.items) {
+      const a = document.createElement('a'); a.className = 'tile'; a.href = p.url; a.target = '_blank'; a.rel = 'noopener sponsored';
+      const left = document.createElement('div');
+      const n = document.createElement('div'); n.className = 'name'; n.textContent = p.name; left.appendChild(n);
+      if (p.why) { const w = document.createElement('div'); w.className = 'why'; w.textContent = p.why; left.appendChild(w); }
+      const go = document.createElement('span'); go.className = 'go'; go.textContent = 'Shop';
+      a.append(left, go); sec.appendChild(a);
     }
-
-    const action = `https://app.kit.com/forms/${KIT_FORM_ID}/subscriptions`;
-    btn.disabled = true; btn.textContent = 'Sending…';
-    try {
-      const res = await fetch(action, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok || data.status === 'failed') throw new Error(data.message || 'Sign-up failed');
-      form.hidden = true;
-      document.getElementById('thanks').hidden = false;
-    } catch (err) {
-      // Fallback: let Kit handle it as a normal form post.
-      form.method = 'post'; form.action = action;
-      form.removeAttribute('novalidate');
-      HTMLFormElement.prototype.submit.call(form);
-    }
-  });
+    cats.appendChild(sec);
+  }
 </script>
 </body>
 </html>
