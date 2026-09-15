@@ -296,7 +296,7 @@
   .whatsin small { display: block; color: var(--ink-soft); font-size: 14.5px; }
 
   /* ---- things I actually use ---- */
-  .picks { display: grid; gap: 12px; }
+  .picks { display: grid; gap: 12px; scroll-margin-top: 24px; }
   .picks h2 {
     margin: 0;
     text-align: center;
@@ -428,8 +428,8 @@
 
   <div class="hearts" aria-hidden="true">♥</div>
 
-  <section class="picks" aria-labelledby="picks-title">
-    <h2 id="picks-title" class="bronze">Things I actually use</h2>
+  <section class="picks" id="amazon-finds" aria-labelledby="picks-title">
+    <h2 id="picks-title" class="bronze">My Amazon finds</h2>
 
     <div id="pick-groups"></div>
 
@@ -438,7 +438,7 @@
     </div>
 
     <a class="btn btn-rose" id="tiktokshop" href="#" hidden>Shop my TikTok Shop picks</a>
-    <a class="btn btn-sage" id="storefront" href="#" hidden>Shop my Amazon favorites</a>
+    <a class="btn btn-sage" id="storefront" href="#" hidden>See my full Amazon storefront</a>
     <p class="disclose">Affiliate links — I may earn a small commission at no extra cost to you.</p>
   </section>
 
@@ -470,9 +470,41 @@
 
   // Recommendations, grouped. Each pick: name, why (one short line), url.
   const PICKS = [
-    { group: "This week's little joys", items: [] },
-    { group: "For quiet time",          items: [] },
-    { group: "For the kids",            items: [] },
+    { group: "At-home microneedling", items: [
+      { name: "Microneedle derma roller (0.25mm)", why: "the one I actually use", url: "https://amzn.to/4xUV82P" },
+      { name: "Lidocaine numbing cream (5%)", why: "makes it painless", url: "https://amzn.to/472BqX2" },
+      { name: "The Ordinary hyaluronic acid serum", why: "after-roll hydration", url: "https://amzn.to/4r9FIW9" },
+      { name: "Spa headbands + scrunchies", why: "hair out of the way", url: "https://amzn.to/4rlMs39" },
+    ]},
+    { group: "Disney trip", items: [
+      { name: "Toddler harness leash (3-in-1)", why: "crowds + a runner = this", url: "https://amzn.to/4iprJsT" },
+      { name: "Minnie stroller organizer", why: "snacks, wipes, phone", url: "https://amzn.to/4rhZgaY" },
+      { name: "Pink polka-dot fanny pack for kids", why: "she carries her own stuff", url: "https://amzn.to/4h8pQyA" },
+    ]},
+    { group: "Bath & teeth", items: [
+      { name: "Bath toy organizer + foam ABC letters", why: "", url: "https://amzn.to/46omrXm" },
+      { name: "Boka toothpaste (fluoride-free, nano-hydroxyapatite)", why: "mine", url: "https://amzn.to/4yGffly" },
+      { name: "LOL! Kids strawberry toothpaste", why: "the kids' version", url: "https://amzn.to/4hvbzw7" },
+    ]},
+    { group: "Vitamins & supplements", items: [
+      { name: "Organic Lion's Mane capsules", why: "memory + focus for mom brain", url: "https://amzn.to/4h1Usl3" },
+      { name: "Kids multivitamin gummies with iron", why: "sugar-free, methylated", url: "https://amzn.to/46q9yfm" },
+      { name: "Kids super greens gummies", why: "for the veggie refusers", url: "https://amzn.to/46pPJVv" },
+      { name: "Kids calm gummies (magnesium + omega-3)", why: "bedtime helper", url: "https://amzn.to/4AeDett" },
+    ]},
+    { group: "My low-tox makeup", items: [
+      { name: "IT Cosmetics CC+ Cream SPF 50", why: "my everyday foundation", url: "https://amzn.to/3T4lxw8" },
+    ]},
+    { group: "Crafts & learning", items: [
+      { name: "Crayola Twistables crayons (24)", why: "no peeling, no breaking", url: "https://amzn.to/3UVA2mr" },
+      { name: "Toddler crayons (ages 1–3)", why: "unbreakable, non-toxic", url: "https://amzn.to/4h1V3TP" },
+      { name: "Disappearing magic ink pens", why: "church + restaurant lifesaver", url: "https://amzn.to/4yDPkLe" },
+      { name: "Grooved handwriting practice books", why: "ages 3–8", url: "https://amzn.to/3Vw9iZV" },
+    ]},
+    { group: "Clothes", items: [
+      { name: "Pink tennis outfit (mine)", why: "", url: "https://amzn.to/3US13Y2" },
+      { name: "Girls' quick-dry skorts", why: "The Children's Place", url: "https://amzn.to/4h5BcmW" },
+    ]},
   ];
 
   /* =============================================================== */
