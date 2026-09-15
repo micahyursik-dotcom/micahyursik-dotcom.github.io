@@ -382,6 +382,8 @@
     .btn, .cta .band { transition: none; }
   }
 </style>
+<!-- GoatCounter: free, cookie-free click counter (momtok-pulse reads it) -->
+<script data-goatcounter="https://micahyursik.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -610,6 +612,12 @@
       HTMLFormElement.prototype.submit.call(form);
     }
   });
+</script>
+<script>
+  // count printable opens (momtok-pulse)
+  document.querySelectorAll('a.dl').forEach(a => a.addEventListener('click', () => {
+    window.goatcounter && goatcounter.count({ path: 'printable/' + a.getAttribute('href').replace('.pdf',''), title: a.getAttribute('href'), event: true });
+  }));
 </script>
 </body>
 </html>

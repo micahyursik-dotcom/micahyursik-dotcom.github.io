@@ -402,6 +402,8 @@
   .back { text-align: center; }
   .back a { color: var(--rose-deep); font-family: "Playfair Display", Georgia, serif; font-weight: 600; text-decoration: none; }
 </style>
+<!-- GoatCounter: free, cookie-free click counter (momtok-pulse reads it) -->
+<script data-goatcounter="https://micahyursik.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <img class="floral tr" src="floral.webp" alt="" aria-hidden="true">
@@ -489,6 +491,7 @@
 
   const store = document.getElementById('storefront');
   if (STOREFRONT_URL) { store.href = STOREFRONT_URL; store.hidden = false; store.target = '_blank'; store.rel = 'noopener sponsored'; }
+  store.addEventListener('click', () => { window.goatcounter && goatcounter.count({ path: 'finds/storefront', title: 'Amazon storefront', event: true }); });
   const cats = document.getElementById('cats');
   for (const g of PICKS) {
     if (!g.items.length) continue;
@@ -500,6 +503,7 @@
       const n = document.createElement('div'); n.className = 'name'; n.textContent = p.name; left.appendChild(n);
       if (p.why) { const w = document.createElement('div'); w.className = 'why'; w.textContent = p.why; left.appendChild(w); }
       const go = document.createElement('span'); go.className = 'go'; go.textContent = 'Shop';
+      a.addEventListener('click', () => { window.goatcounter && goatcounter.count({ path: 'finds/' + p.name, title: p.name, event: true }); });
       a.append(left, go); sec.appendChild(a);
     }
     cats.appendChild(sec);
